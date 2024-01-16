@@ -28,6 +28,7 @@
 	# point or use it in the same manner as does the server
 	# compiler.
 
+        .code32
         .globl _Copy_arrayof_conjoint_bytes
         .globl _Copy_conjoint_jshorts_atomic
 	.globl _Copy_arrayof_conjoint_jshorts
