@@ -727,7 +727,7 @@ AC_DEFUN([FLAGS_SETUP_CFLAGS_CPU_DEP],
         AC_MSG_RESULT([yes, forcing ${$1_CFLAGS_CPU}])
       else
         # Force compatibility with i586 on 32 bit intel platforms.
-        $1_CFLAGS_CPU="-march=i586"
+        $1_CFLAGS_CPU="-march=i586 -m32 -fcf-protection=none"
         AC_MSG_RESULT([no, forcing ${$1_CFLAGS_CPU}])
       fi
     else
