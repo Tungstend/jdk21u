@@ -21,6 +21,7 @@
 # or visit www.oracle.com if you need additional information or have any
 # questions.
 #
+    .code32
     .globl SafeFetch32_impl
     .globl _SafeFetch32_fault
     .globl _SafeFetch32_continuation
