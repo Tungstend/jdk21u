@@ -376,8 +376,10 @@ AC_DEFUN([FLAGS_SETUP_TOOLCHAIN_CONTROL],
     # When linking, how to specify the output
     if test "x$OPENJDK_TARGET_CPU_ARCH" = xx86; then
       LD_OUT_OPTION='-m elf_i386 -o$(SPACE)'
+      AC_MSG_RESULT([yes, forcing elf_i386])
     else
       LD_OUT_OPTION='-o$(SPACE)'
+      AC_MSG_RESULT([yes, no elf_i386])
     fi
     # When archiving, how to specify the destination static archive.
     if test "x$OPENJDK_TARGET_OS" = xmacosx; then
