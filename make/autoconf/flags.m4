@@ -374,7 +374,7 @@ AC_DEFUN([FLAGS_SETUP_TOOLCHAIN_CONTROL],
     # When compiling, how to specify the to be created object file.
     CC_OUT_OPTION='-o$(SPACE)'
     # When linking, how to specify the output
-    if test "x$FLAGS_CPU" = xx86; then
+    if test "x$OPENJDK_TARGET_CPU_ARCH" = xx86
       LD_OUT_OPTION='-m elf_i386 -o$(SPACE)'
     else
       LD_OUT_OPTION='-o$(SPACE)'
