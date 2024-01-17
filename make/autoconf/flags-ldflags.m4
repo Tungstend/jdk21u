@@ -173,7 +173,7 @@ AC_DEFUN([FLAGS_SETUP_LDFLAGS_CPU_DEP],
   # build toolchain.
   if test "x$TOOLCHAIN_TYPE" = xgcc; then
     if test "x${OPENJDK_$1_CPU}" = xx86; then
-      $1_CPU_LDFLAGS_JVM_ONLY="-march=i586 -melf_i386"
+      $1_CPU_LDFLAGS_JVM_ONLY="-march=i586 -m elf_i386"
     elif test "x$OPENJDK_$1_CPU" = xarm; then
       $1_CPU_LDFLAGS_JVM_ONLY="${$1_CPU_LDFLAGS_JVM_ONLY} -fsigned-char"
       $1_CPU_LDFLAGS="$ARM_ARCH_TYPE_FLAGS $ARM_FLOAT_TYPE_FLAGS"
@@ -196,7 +196,7 @@ AC_DEFUN([FLAGS_SETUP_LDFLAGS_CPU_DEP],
       $1_CPU_EXECUTABLE_LDFLAGS="-stack:1048576"
     fi
     if test "x${OPENJDK_$1_CPU}" = "xx86"; then
-      $1_CPU_LDFLAGS="-melf_i386 -safeseh"
+      $1_CPU_LDFLAGS="-m elf_i386 -safeseh"
     fi
   fi
 
