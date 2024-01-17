@@ -374,13 +374,7 @@ AC_DEFUN([FLAGS_SETUP_TOOLCHAIN_CONTROL],
     # When compiling, how to specify the to be created object file.
     CC_OUT_OPTION='-o$(SPACE)'
     # When linking, how to specify the output
-    if test "x$OPENJDK_TARGET_CPU_ARCH" = xx86; then
-      LD_OUT_OPTION='-Wl,-melf_i386 -o$(SPACE)'
-      AC_MSG_RESULT([yes, forcing elf_i386])
-    else
-      LD_OUT_OPTION='-o$(SPACE)'
-      AC_MSG_RESULT([yes, no elf_i386])
-    fi
+    LD_OUT_OPTION='-o$(SPACE)'
     # When archiving, how to specify the destination static archive.
     if test "x$OPENJDK_TARGET_OS" = xmacosx; then
       AR_OUT_OPTION='-r -cs$(SPACE)'
