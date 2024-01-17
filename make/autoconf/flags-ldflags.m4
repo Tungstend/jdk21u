@@ -196,7 +196,7 @@ AC_DEFUN([FLAGS_SETUP_LDFLAGS_CPU_DEP],
       $1_CPU_EXECUTABLE_LDFLAGS="-stack:1048576"
     fi
     if test "x${OPENJDK_$1_CPU}" = "xx86"; then
-      $1_CPU_LDFLAGS="-safeseh -m elf_i386"
+      $1_CPU_LDFLAGS="-safeseh"
     fi
   fi
 
