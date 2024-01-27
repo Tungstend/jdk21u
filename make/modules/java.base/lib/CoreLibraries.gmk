@@ -110,6 +110,10 @@ $(eval $(call SetupJdkLibrary, BUILD_LIBZIP, \
 
 $(BUILD_LIBZIP): $(BUILD_LIBJAVA)
 
+ifeq ($(OPENJDK_TARGET_OS), linux)
+  $(BUILD_LIBJAVA): $(BUILD_LIBTINYICONV)
+endif
+
 TARGETS += $(BUILD_LIBZIP)
 
 ##########################################################################################
